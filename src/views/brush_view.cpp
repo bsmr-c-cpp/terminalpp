@@ -1,7 +1,7 @@
 #include "terminalpp/views/brush_view.hpp"
+#include "terminalpp/views/draw_context.hpp"
 #include "terminalpp/models/default_brush_model.hpp"
 #include "terminalpp/canvas_view.hpp"
-#include "terminalpp/draw_context.hpp"
 
 namespace terminalpp { namespace views {
 
@@ -17,7 +17,7 @@ brush_view::brush_view()
 // DRAW
 // ==========================================================================
 void brush_view::draw(
-    terminalpp::draw_context &dc,
+    terminalpp::views::draw_context &dc,
     terminalpp::rectangle const &region) const
 {
     auto &canvas = dc.get_canvas();
@@ -64,7 +64,7 @@ terminalpp::extent brush_view::get_size() const
 // EVENT
 // ==========================================================================
 boost::any brush_view::event(
-    terminalpp::event_context &ec, boost::any const &ev)
+    terminalpp::views::event_context &ec, boost::any const &ev)
 {
     return {};
 }

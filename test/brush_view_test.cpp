@@ -1,17 +1,17 @@
 #include <terminalpp/views/brush_view.hpp>
-#include <terminalpp/events/default_event_context.hpp>
 #include <terminalpp/views/default_draw_context.hpp>
+#include <terminalpp/views/default_event_context.hpp>
+#include <terminalpp/views/draw_context.hpp>
+#include <terminalpp/views/event_context.hpp>
+#include <terminalpp/views/view.hpp>
 #include <terminalpp/models/default_brush_model.hpp>
 #include <terminalpp/canvas.hpp>
 #include <terminalpp/canvas_view.hpp>
-#include <terminalpp/draw_context.hpp>
-#include <terminalpp/event_context.hpp>
-#include <terminalpp/view.hpp>
 #include <gtest/gtest.h>
 
 TEST(brush_view_test, brush_view_is_a_view)
 {
-    terminalpp::view view{terminalpp::views::brush_view{}};
+    terminalpp::views::view view{terminalpp::views::brush_view{}};
 }
 
 TEST(brush_view_test, a_new_brush_view_has_a_preferred_size_of_zero)
@@ -52,7 +52,7 @@ TEST(brush_view_test, setting_the_size_changes_the_preferred_size_to_the_same_va
 
 TEST(brush_view_test, drawing_the_view_draws_the_fill_pattern)
 {
-    terminalpp::view view{
+    terminalpp::views::view view{
         terminalpp::views::brush_view{
             terminalpp::models::default_brush_model{'x'}
         }};
@@ -62,7 +62,7 @@ TEST(brush_view_test, drawing_the_view_draws_the_fill_pattern)
     terminalpp::canvas_view canvas_view(canvas);
     canvas_view.offset_by({1, 1});
 
-    terminalpp::draw_context dc{
+    terminalpp::views::draw_context dc{
         terminalpp::views::default_draw_context{canvas_view}};
 
     view.draw(dc, {{}, view.get_size()});
@@ -97,8 +97,8 @@ TEST(brush_view_test, events_are_unhandled)
 {
     terminalpp::views::brush_view view;
 
-    terminalpp::event_context event_context{
-        terminalpp::events::default_event_context{}};
+    terminalpp::views::event_context event_context{
+        terminalpp::views::default_event_context{}};
 
     auto const &result = view.event(event_context, {});
 

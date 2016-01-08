@@ -5,7 +5,7 @@
 #include <boost/any.hpp>
 #include <memory>
 
-namespace terminalpp {
+namespace terminalpp { namespace views {
 
 class draw_context;
 class event_context;
@@ -124,6 +124,6 @@ private :
     std::unique_ptr<concept> self_;
 };
 
-}
+}}
 
 #endif

@@ -1,7 +1,7 @@
-#ifndef TERMINALPP_EVENTS_DEFAULT_EVENT_CONTEXT_HPP_
-#define TERMINALPP_EVENTS_DEFAULT_EVENT_CONTEXT_HPP_
+#ifndef TERMINALPP_VIEWS_DEFAULT_EVENT_CONTEXT_HPP_
+#define TERMINALPP_VIEWS_DEFAULT_EVENT_CONTEXT_HPP_
 
-namespace terminalpp { namespace events {
+namespace terminalpp { namespace views {
 
 //* =========================================================================
 /// \brief A default implementation of an event context.

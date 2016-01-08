@@ -6,12 +6,10 @@
 #include <boost/any.hpp>
 #include <utility>
 
-namespace terminalpp {
+namespace terminalpp { namespace views {
 
 class draw_context;
 class event_context;
-
-namespace views {
 
 //* =========================================================================
 /// \brief A Concept that contains an object that is a view of a brush.
@@ -38,7 +36,7 @@ public :
     /// \brief Draws the view.
     //* =====================================================================
     void draw(
-        terminalpp::draw_context &dc,
+        terminalpp::views::draw_context &dc,
         terminalpp::rectangle const &region) const;
 
     //* =====================================================================
@@ -60,7 +58,9 @@ public :
     //* =====================================================================
     /// \brief Sends an event to the view.  This always goes unhandled.
     //* =====================================================================
-    boost::any event(terminalpp::event_context &ec, boost::any const &ev);
+    boost::any event(
+        terminalpp::views::event_context &ec, 
+        boost::any const &ev);
 
 private :
     terminalpp::extent size_;

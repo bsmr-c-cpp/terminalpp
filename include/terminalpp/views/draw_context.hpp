@@ -1,5 +1,5 @@
-#ifndef TERMINALPP_DRAW_CONTEXT_HPP_
-#define TERMINALPP_DRAW_CONTEXT_HPP_
+#ifndef TERMINALPP_VIEWS_DRAW_CONTEXT_HPP_
+#define TERMINALPP_VIEWS_DRAW_CONTEXT_HPP_
 
 #include <memory>
 #include <utility>
@@ -8,6 +8,8 @@ namespace terminalpp {
 
 class canvas_view;
 
+namespace views {
+    
 //* =========================================================================
 /// \brief A Concept class that represents everything necessary for a view
 /// to draw itself.
@@ -56,6 +58,6 @@ private :
     std::unique_ptr<concept> self_;
 };
 
-}
+}}
 
 #endif

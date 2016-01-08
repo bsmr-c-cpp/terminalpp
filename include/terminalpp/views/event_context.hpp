@@ -1,10 +1,10 @@
-#ifndef TERMINALPP_EVENT_CONTEXT_HPP_
-#define TERMINALPP_EVENT_CONTEXT_HPP_
+#ifndef TERMINALPP_VIEWS_EVENT_CONTEXT_HPP_
+#define TERMINALPP_VIEWS_EVENT_CONTEXT_HPP_
 
 #include <memory>
 #include <utility>
 
-namespace terminalpp {
+namespace terminalpp { namespace views {
 
 //* =========================================================================
 /// \brief A Concept class that represents everything necessary for a view
@@ -39,6 +39,6 @@ private :
     std::unique_ptr<concept> self_;
 };
 
-}
+}}
 
 #endif
