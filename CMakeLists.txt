@@ -51,6 +51,7 @@ add_library(terminalpp
     src/encoder.cpp
     src/extent.cpp
     src/glyph.cpp
+    src/layouts/grid_layout.cpp
     src/models/default_brush_model.cpp
     src/point.cpp
     src/rectangle.cpp
@@ -116,6 +117,7 @@ if (GTEST_FOUND)
         test/encoder_test.cpp
         test/expect_sequence.cpp
         test/expect_tokens.cpp
+        test/grid_layout_test.cpp
         test/rectangle_test.cpp
         test/screen_test.cpp
         test/string_test.cpp
