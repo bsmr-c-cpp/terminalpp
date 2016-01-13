@@ -59,6 +59,7 @@ add_library(terminalpp
     src/string_io.cpp
     src/terminal.cpp
     src/views/brush_view.cpp
+    src/views/container_view.cpp
     src/views/default_draw_context.cpp
     src/virtual_key.cpp
 )
@@ -109,6 +110,7 @@ if (GTEST_FOUND)
         test/canvas_test.cpp
         test/canvas_view_test.cpp
         test/colour_test.cpp
+        test/container_view_test.cpp
         test/default_brush_model_test.cpp
         test/default_draw_context_test.cpp
         test/default_event_context_test.cpp
