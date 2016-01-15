@@ -52,6 +52,7 @@ add_library(terminalpp
     src/extent.cpp
     src/glyph.cpp
     src/models/default_brush_model.cpp
+    src/models/default_container_model.cpp
     src/point.cpp
     src/rectangle.cpp
     src/screen.cpp
@@ -112,6 +113,7 @@ if (GTEST_FOUND)
         test/colour_test.cpp
         test/container_view_test.cpp
         test/default_brush_model_test.cpp
+        test/default_container_model_test.cpp
         test/default_draw_context_test.cpp
         test/default_event_context_test.cpp
         test/default_list_model_test.cpp
