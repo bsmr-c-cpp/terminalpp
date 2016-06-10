@@ -176,6 +176,12 @@ public :
     std::string move_cursor(point const &pt);
 
     //* =====================================================================
+    /// \brief Requests that the terminal respond with the device's
+    /// primary device attributes.
+    //* =====================================================================
+    std::string request_device_attributes();
+    
+    //* =====================================================================
     /// \brief Reads a stream of data.
     //* =====================================================================
     std::vector<token> read(std::string const &data);

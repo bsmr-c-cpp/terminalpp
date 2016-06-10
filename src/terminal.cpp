@@ -1,4 +1,5 @@
 #include "terminalpp/terminal.hpp"
+#include "terminalpp/ansi/csi.hpp"
 #include "terminalpp/ansi/osc.hpp"
 #include "terminalpp/detail/terminal_control.hpp"
 #include "terminalpp/detail/terminal_cursor_control.hpp"
@@ -287,6 +288,14 @@ std::string terminal::move_cursor(point const &pos)
     cursor_position_ = pos;
 
     return result;
+}
+
+// ==========================================================================
+// REQUEST_DEVICE_ATTRIBUTES
+// ==========================================================================
+std::string terminal::request_device_attributes()
+{
+    return detail::csi(control_mode_) + ansi::csi::SEND_DEVICE_ATTRIBUTES;
 }
 
 // ==========================================================================

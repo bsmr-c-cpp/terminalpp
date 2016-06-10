@@ -80,6 +80,24 @@ static char const ERASE_CHARACTER                  = terminalpp::ascii::UPPERCAS
 // Tab backwards
 static char const CURSOR_BACKWARD_TABULATION       = terminalpp::ascii::UPPERCASE_Z;
 
+// Character Position Absolute
+static char const CHARACTER_POSITION_ABSOLUTE      = terminalpp::ascii::GRAVE;
+
+// Character Position Relative
+static char const CHARACTER_POSITION_RELATIVE      = terminalpp::ascii::LOWERCASE_A;
+
+// Repeat Preceding Graphic Character
+static char const REPEAT_PRECEDING_CHARACTER       = terminalpp::ascii::LOWERCASE_B;
+
+// Send Device Attributes
+static char const SEND_DEVICE_ATTRIBUTES           = terminalpp::ascii::LOWERCASE_C;
+
+// Line Position Absolute
+static char const LINE_POSITION_ABSOLUTE           = terminalpp::ascii::LOWERCASE_D;
+
+// Line Position Relative
+static char const LINE_POSITION_RELATIVE           = terminalpp::ascii::LOWERCASE_E;
+
 // Keypad buttons / Function keys
 static char const KEYPAD_FUNCTION                  = terminalpp::ascii::TILDE;
     static u8 const KEYPAD_HOME                    = 1;
@@ -118,12 +136,8 @@ static char const KEYPAD_FUNCTION                  = terminalpp::ascii::TILDE;
     static u8 const MODIFIER_META_ALT_CTRL         = 15;
     static u8 const MODIFIER_META_SHIFT_ALT_CTRL   = 16;
 
-// DEC Private Mode
-static char const DECSET                           = terminalpp::ascii::LOWERCASE_H;
-static char const DECRST                           = terminalpp::ascii::LOWERCASE_L;
-    static char const CURSOR_STATE[]               = {terminalpp::ascii::TWO,
-                                                      terminalpp::ascii::FIVE, 0};
-
+// DEC Request Terminal Parameters
+static char const DECREQTPARM                      = terminalpp::ascii::LOWERCASE_X;
 }}}
 
 #endif

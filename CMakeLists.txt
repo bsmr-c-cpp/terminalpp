@@ -112,6 +112,7 @@ if (GTEST_FOUND)
         test/expect_tokens.cpp
         test/screen_test.cpp
         test/string_test.cpp
+        test/terminal_commands_test.cpp
         test/terminal_cursor_test.cpp
         test/terminal_init_test.cpp
         test/terminal_read_cursor_test.cpp
